@@ -8,21 +8,21 @@
 
 import React from 'react';
 import FRC from 'formsy-react-components';
+import EmptyForm from './EmptyForm'
 
 const { Input, Textarea } = FRC;
 
-export default class TNyLGForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+const ContentInside = React.createClass({
+  mixins: [FRC.ParentContextMixin],
 
-    };
-  }
+  propTypes: {
+      children: React.PropTypes.node
+  },
 
   render() {
-    return (
-      <fieldset>
-	        	<Textarea
+      return (
+          <fieldset>
+            <Textarea
               rows={3}
               cols={40}
               name="title"
@@ -31,10 +31,10 @@ export default class TNyLGForm extends React.Component {
               validations="minLength:5"
               required
               validationErrors={{
-		                minLength: 'Este campo es requerido. Ingrese al menos 5 caracteres.'
-		            }}
+                    minLength: 'Este campo es requerido. Ingrese al menos 5 caracteres.'
+                }}
             />
-		        <Textarea
+            <Textarea
               rows={3}
               cols={40}
               name="location"
@@ -43,10 +43,10 @@ export default class TNyLGForm extends React.Component {
               validations="minLength:5"
               required
               validationErrors={{
-		                minLength: 'Este campo es requerido. Ingrese al menos 5 caracteres.'
-		            }}
+                    minLength: 'Este campo es requerido. Ingrese al menos 5 caracteres.'
+                }}
             />
-		        <Textarea
+            <Textarea
               rows={3}
               cols={40}
               name="body"
@@ -55,8 +55,8 @@ export default class TNyLGForm extends React.Component {
               validations="minLength:5"
               required
               validationErrors={{
-		                minLength: 'Este campo es requerido. Ingrese al menos 5 caracteres.'
-		            }}
+                    minLength: 'Este campo es requerido. Ingrese al menos 5 caracteres.'
+                }}
             />
         <Input
           name="phone"
@@ -67,11 +67,30 @@ export default class TNyLGForm extends React.Component {
           validations="isNumeric,minLength:8"
           required
           validationErrors={{
-		                minLength: 'Por favor ingrese un numero telefonico.',
-		                isNumeric: 'Por favor ingrese solo numeros.'
-		            }}
+                    minLength: 'Por favor ingrese un numero telefonico.',
+                    isNumeric: 'Por favor ingrese solo numeros.'
+                }}
         />
       </fieldset>
+      );
+  }
+});
+
+export default class ExampleForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+
+  submit(data) {
+    console.log("ahora si!: ", data);
+  }
+
+  render() {
+    return (
+      <EmptyForm insideForm={<ContentInside />} submitValue="Publicar nota" submitAction={this.submit}/>
     );
   }
 

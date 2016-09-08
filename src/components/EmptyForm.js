@@ -43,13 +43,9 @@ export default class TnFormReactComponent extends React.Component {
 	    this.setState(newState);
 	}
 
-	submit(data) {
-		console.log(data);
-	}
-
   render(){
     return (
-    	<EmptyForm onSubmit={this.submit} ref="empty_form" className={this.state.getclass} >
+    	<EmptyForm onSubmit={this.props.submitAction} ref="empty_form" className={this.state.getclass} >
         {this.props.insideForm}
         <input className="btn btn-primary" type="submit" defaultValue={this.props.submitValue} />
 	  </EmptyForm>
