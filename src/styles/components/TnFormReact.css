@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.tnylg-publish {
+  background-color: #f8f8f8; }
+  .tnylg-publish abbr[title] {
+    position: absolute;
+    color: #ff6600; }
+  .tnylg-publish .publish-ribbon {
+    background-image: linear-gradient(to right, #ff6600, #dc1010);
+    color: white;
+    font-size: 1.75em;
+    font-weight: 500;
+    height: 96px;
+    padding: 30px 0 0 36px; }
+  .tnylg-publish h2 {
+    font-size: 1.75em;
+    line-height: 1.42857em;
+    margin-top: 3.42857em; }
+    .tnylg-publish h2 span {
+      padding: 8px 12px 8px 0;
+      font-size: 0.64286em;
+      color: #ff6600; }
+      .tnylg-publish h2 span::after {
+        content: "→";
+        padding: 8px 0 8px 12px; }
+  .tnylg-publish textarea,
+  .tnylg-publish input {
+    background-color: white;
+    border: none;
+    padding: 12px;
+    resize: none;
+    width: 87.5%;
+    height: 88px;
+    margin-left: 8%; }
+  .tnylg-publish input[type='file'] {
+    display: none; }
+  .tnylg-publish #dropTarget {
+    text-align: center;
+    width: 91%;
+    margin-left: 8%;
+    padding: 5% 0; }
+  .tnylg-publish p.phone {
+    color: #c9c9c9;
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    margin: 2% 0 3.42857em 8%; }
+  .tnylg-publish button,
+  .tnylg-publish .btn {
+    font-size: 0.875em;
+    color: white;
+    height: 48px;
+    background-color: #ff6600;
+    border: 0;
+    margin-left: 8%; }
+  .tnylg-publish button {
+    width: 108px; }
+  .tnylg-publish .btn {
+    width: 240px;
+    height: 48px;
+    display: block;
+    text-align: center;
+    line-height: 3em;
+    margin-left: 30%; }
+  .tnylg-publish p.publish-warning {
+    color: #ff6600;
+    font-size: 0.875em;
+    margin: 2% 0 3.42857em 8%; }
