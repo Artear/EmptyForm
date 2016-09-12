@@ -6,7 +6,7 @@
 /* Based on: https://github.com/twisty/formsy-react-components/blob/gh-pages/playground/src/app.js */
 'use strict';
 
-import React from 'react';
+import React from 'reazct';
 import Formsy from 'formsy-react';
 import FRC from 'formsy-react-components';
 
@@ -27,7 +27,7 @@ const EmptyForm = React.createClass({
 });
 
 
-export default class TnFormReactComponent extends React.Component {
+export default class EmptyFormReactComponent extends React.Component {
   constructor(props) {
     super(props);
 
@@ -41,7 +41,7 @@ export default class TnFormReactComponent extends React.Component {
 	    var newState = {};
 	    newState[name] = value;
 	    this.setState(newState);
-	}
+	};
 
   render(){
     return (
