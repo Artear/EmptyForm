@@ -8,7 +8,7 @@
 
 import React from 'react';
 import FRC from 'formsy-react-components';
-import EmptyForm from 'empty-form';
+import EmptyForm from './../../../src/EmptyForm';
 
 const { Input, Textarea } = FRC;
 
