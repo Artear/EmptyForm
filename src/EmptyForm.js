@@ -6,7 +6,7 @@
 /* Based on: https://github.com/twisty/formsy-react-components/blob/gh-pages/playground/src/app.js */
 'use strict';
 
-import React from 'reazct';
+import React from 'react';
 import Formsy from 'formsy-react';
 import FRC from 'formsy-react-components';
 

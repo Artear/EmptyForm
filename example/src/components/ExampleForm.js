@@ -8,7 +8,7 @@
 
 import React from 'react';
 import FRC from 'formsy-react-components';
-import EmptyForm from './../../../src/EmptyForm'
+import EmptyForm from 'emptyform';
 
 const { Input, Textarea } = FRC;
 
@@ -85,7 +85,7 @@ export default class ExampleForm extends React.Component {
   }
 
   submit(data) {
-    console.log("ahora si!: ", data);
+    console.log("SubmitData", data);
   }
 
   render() {

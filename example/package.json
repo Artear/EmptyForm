@@ -69,6 +69,7 @@
     "gridlex": "^2.2.2",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react-dom": "^15.0.0",
+    "emptyform": "https://github.com/Artear/EmptyForm/archive/1.0.0-beta.tar.gz"
   }
 }
