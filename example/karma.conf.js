@@ -1,11 +1,11 @@
-var webpackCfg = require('./webpack.config');
+var webpackCfg = require('./webpack.config.js');
 
 // Set node environment to testing
 process.env.NODE_ENV = 'test';
 
 module.exports = function(config) {
   config.set({
-    basePath: '',
+    basePath: '../),
     browsers: [ 'PhantomJS' ],
     files: [
       'test/loadtests.js'
