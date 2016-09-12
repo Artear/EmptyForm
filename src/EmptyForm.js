@@ -10,7 +10,7 @@ import React from "react";
 import Formsy from "formsy-react";
 import FRC from "formsy-react-components";
 
-const EmptyForm = React.createClass({
+const EmptyFormBase = React.createClass({
     mixins: [FRC.ParentContextMixin],
 
     propTypes: {
@@ -27,7 +27,7 @@ const EmptyForm = React.createClass({
 });
 
 
-export default class EmptyFormReactComponent extends React.Component {
+export default class EmptyForm extends React.Component {
     constructor(props) {
         super(props);
 
@@ -45,10 +45,10 @@ export default class EmptyFormReactComponent extends React.Component {
 
     render() {
         return (
-            <EmptyForm onSubmit={this.props.submitAction} ref="empty_form" className={this.state.getclass}>
+            <EmptyFormBase onSubmit={this.props.submitAction} ref="empty_form" className={this.state.getclass}>
                 {this.props.insideForm}
                 <input className="btn btn-primary" type="submit" defaultValue={this.props.submitValue}/>
-            </EmptyForm>
+            </EmptyFormBase>
         );
     }
 };
