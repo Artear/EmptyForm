@@ -90,7 +90,12 @@ export default class ExampleForm extends React.Component {
 
   render() {
     return (
-      <EmptyForm insideForm={<ContentInside />} submitValue="Publish it!" submitAction={this.submit}/>
+      <EmptyForm
+        insideForm={<ContentInside />}
+        formClass='tnylg-publish form-vertical'
+        invalidFormAction=""
+        submitValue="Publish it!"
+        submitAction={this.submit}/>
     );
   }
 
