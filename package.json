@@ -1,6 +1,6 @@
 {
   "name": "emptyform",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "It creates a generic wrapper for the form. So you need to add the content of the inside form, from another React Component.",
   "main": "./build/emptyform",
   "directories": {
@@ -17,7 +17,18 @@
     "emptyform",
     "react"
   ],
-  "author": "ARTEAR",
+  "author": {
+    "name": "Gonzalo Rubino",
+    "email": "gonzalo_rubino@artear.com",
+    "url": "https://github.com/grubinoartear",
+    "company": "Artear"
+  },
+  "contributors": [
+    {
+      "name": "Alejo Daraio",
+      "url": "https://github.com/alejodaraio"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Artear/EmptyForm/issues"

@@ -1,7 +1,15 @@
 /**
  * Empty Form ReactJS Component
  * @author Gonzalo Rubino gonzalo_rubino@artear.com
- * @version 1.0
+ * @version 1.0.8
+ *
+ * Use as: <EmptyForm insideForm={<ContentInside />} invalidFormAction="" submitValue="Publish it!" submitAction={this.submit}/>
+ *
+ * @param {String} formClass The desired class for the form
+ * @param {Object} <ContentInside /> A class of ReactJS containing the elements that will be inside the form.
+ * @param {Function} submitAction The method to call as a callback, when Submit button is pressed.
+ * @param {Function} invalidFormAction When form is invalid, will call this action. Usefull to deactivate a submit button, for example.
+ * @param {String} submitValue The label for the Submit button
  */
 /* Based on: https://github.com/twisty/formsy-react-components/blob/gh-pages/playground/src/app.js */
 'use strict';
@@ -33,7 +41,7 @@ export default class EmptyForm extends React.Component {
 
         // Default state
         this.state = {
-            getclass: 'tnylg-publish form-vertical'
+            getclass: this.props.formClass
         };
     }
 
@@ -45,7 +53,7 @@ export default class EmptyForm extends React.Component {
 
     render() {
         return (
-            <EmptyFormBase onSubmit={this.props.submitAction} ref="empty_form" className={this.state.getclass}>
+            <EmptyFormBase onSubmit={this.props.submitAction} onInvalid={this.props.invalidFormAction ? this.props.invalidFormAction : ''} ref="empty_form" className={this.state.getclass}>
                 {this.props.insideForm}
                 <input className="btn btn-primary" type="submit" defaultValue={this.props.submitValue}/>
             </EmptyFormBase>

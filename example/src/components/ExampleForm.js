@@ -1,7 +1,7 @@
 /*
 
 @author Gonzalo Rubino on Thursday, September 8th, 2016, 10:54:00 AM
-@version 1.0
+@version 1.0.8
 @Description TN y La Gente Publish Form
 
 */
@@ -90,7 +90,7 @@ export default class ExampleForm extends React.Component {
 
   render() {
     return (
-      <EmptyForm insideForm={<ContentInside />} submitValue="Publicar nota" submitAction={this.submit}/>
+      <EmptyForm insideForm={<ContentInside />} submitValue="Publish it!" submitAction={this.submit}/>
     );
   }
 
