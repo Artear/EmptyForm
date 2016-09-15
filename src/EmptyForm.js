@@ -1,7 +1,7 @@
 /**
  * Empty Form ReactJS Component
  * @author Gonzalo Rubino gonzalo_rubino@artear.com
- * @version 1.0.10
+ * @version 1.0.12
  *
  * Use as: <EmptyForm insideForm={<ContentInside />} invalidFormAction="" submitValue="Publish it!" submitAction={this.submit}/>
  *
@@ -28,7 +28,13 @@ const EmptyFormBase = React.createClass({
 
     render() {
         return (
-            <Formsy.Form className={this.props.className} ref="empty_form" onSubmit={this.props.onSubmit}>
+            <Formsy.Form
+               className={this.props.className}
+               ref="empty_form"
+               onSubmit={this.props.onSubmit}
+               onInvalid={this.props.onInvalid}
+               onValid={this.props.onValid}>
+
                 {this.props.children}
             </Formsy.Form>
         );
@@ -55,8 +61,8 @@ export default class EmptyForm extends React.Component {
     render() {
         return (
             <EmptyFormBase onSubmit={this.props.submitAction}
-                onInvalid={this.props.invalidFormAction ? this.props.invalidFormAction : ''}
-                onValid={this.props.validFormAction ? this.props.validFormAction : ''}
+                onInvalid={this.props.invalidFormAction}
+                onValid={this.props.validFormAction}
                 ref="empty_form"
                 className={this.state.getclass}>
                     {this.props.insideForm}
