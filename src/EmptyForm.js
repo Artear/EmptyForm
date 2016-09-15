@@ -1,7 +1,7 @@
 /**
  * Empty Form ReactJS Component
  * @author Gonzalo Rubino gonzalo_rubino@artear.com
- * @version 1.0.9
+ * @version 1.0.10
  *
  * Use as: <EmptyForm insideForm={<ContentInside />} invalidFormAction="" submitValue="Publish it!" submitAction={this.submit}/>
  *
