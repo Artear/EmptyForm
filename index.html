@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Emptyform : Example of Emptyform">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Emptyform</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Artear/EmptyForm">View on GitHub</a>
+
+          <h1 id="project_title">Emptyform</h1>
+          <h2 id="project_tagline">Example of Emptyform</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Artear/EmptyForm/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Artear/EmptyForm/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="emptyform" class="anchor" href="#emptyform" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmptyForm</h1>
+
+<p>ReactJS Form.</p>
+
+<p>It creates a generic wrapper for the form. So you need to add the content of the inside form, from another React Component.</p>
+
+<p>EmptyForm will create the shell.
+Take a look at ExampleForm to create your own form.
+Take a look too, on how to call the content for the shell: <br></p>
+
+<p><code>
+&lt; EmptyForm insideForm={ &lt; ContentInside /&gt; } invalidFormAction="" submitValue="Publish it!" submitAction={this.submit}/&gt;
+</code> <br></p>
+
+<p>The submit method, will be on the wrapper, for the Empty Form, so you can hit a service or do whatever you need.</p>
+
+<p>Params:</p>
+
+<ul>
+<li>{String} formClass The desired class for the form</li>
+<li>{Object}  A class of ReactJS containing the elements that will be inside the form.</li>
+<li>{Function} submitAction The method to call as a callback, when Submit button is pressed.</li>
+<li>{Function} invalidFormAction When form is invalid, will call this action. Usefull to deactivate a submit button, for example.</li>
+<li>{Function} validFormAction When form is valid, will call this action. Usefull to activate a submit button, for example.</li>
+<li>{String} submitValue The label for the Submit button</li>
+</ul>
+
+<p>To start the example:</p>
+
+<ul>
+<li>enter to Example folder.</li>
+<li>npm install</li>
+<li>npm start, will start a server, after build the files.</li>
+</ul>
+
+<p>Or, see for yourself: <a href="/example/index.html">Example</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Emptyform maintained by <a href="https://github.com/Artear">Artear</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
