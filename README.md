@@ -2,6 +2,8 @@
 
 ReactJS Form.
 
+[![NPM](https://nodei.co/npm/emptyform.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/emptyform/)
+
 It creates a generic wrapper for the form. So you need to add the content of the inside form, from another React Component.
 
 EmptyForm will create the shell.
