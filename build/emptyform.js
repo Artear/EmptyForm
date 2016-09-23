@@ -41,63 +41,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EmptyFormBase = _react2.default.createClass({
-    displayName: "EmptyFormBase",
-
-    mixins: [_formsyReactComponents2.default.ParentContextMixin],
-
-    propTypes: {
-        children: _react2.default.PropTypes.node
-    },
-
-    render: function render() {
-        return _react2.default.createElement(
-            _formsyReact2.default.Form,
-            {
-                className: this.props.className,
-                ref: "empty_form",
-                onSubmit: this.props.onSubmit,
-                onInvalid: this.props.onInvalid,
-                onValid: this.props.onValid },
-            this.props.children
-        );
-    }
-});
-
 var EmptyForm = function (_React$Component) {
     _inherits(EmptyForm, _React$Component);
 
     function EmptyForm(props) {
         _classCallCheck(this, EmptyForm);
 
-        // Default state
-        var _this = _possibleConstructorReturn(this, (EmptyForm.__proto__ || Object.getPrototypeOf(EmptyForm)).call(this, props));
-
-        _this.state = {
-            getclass: _this.props.formClass
-        };
-        return _this;
+        return _possibleConstructorReturn(this, (EmptyForm.__proto__ || Object.getPrototypeOf(EmptyForm)).call(this, props));
     }
 
     _createClass(EmptyForm, [{
-        key: "changeOption",
-        value: function changeOption(name, value) {
-            var newState = {};
-            newState[name] = value;
-            this.setState(newState);
-        }
-    }, {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
-                EmptyFormBase,
-                { onSubmit: this.props.submitAction,
+                _formsyReact2.default.Form,
+                {
+                    className: this.props.formClass,
+                    ref: "emptyform",
+                    onSubmit: this.props.submitAction,
                     onInvalid: this.props.invalidFormAction,
-                    onValid: this.props.validFormAction,
-                    ref: "empty_form",
-                    className: this.state.getclass },
-                this.props.insideForm,
-                _react2.default.createElement("input", { className: "btn btn-primary", type: "submit", defaultValue: this.props.submitValue })
+                    onValid: this.props.validFormAction },
+                this.props.insideForm
             );
         }
     }]);
