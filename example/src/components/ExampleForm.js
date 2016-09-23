@@ -21,43 +21,43 @@ const ContentInside = React.createClass({
 
   render() {
       return (
-          <fieldset>
-            <Textarea
-              rows={3}
-              cols={40}
-              name="title"
-              label="What happens?"
-              placeholder="Ex: A car was hitten by a bus."
-              validations="minLength:5"
-              required
-              validationErrors={{
-                    minLength: 'This field is required. Insert at least 5 chars.'
-                }}
-            />
-            <Textarea
-              rows={3}
-              cols={40}
-              name="location"
-              label="Where was it?"
-              placeholder="Ex: Near the Avenue, at the end of the street."
-              validations="minLength:5"
-              required
-              validationErrors={{
-                    minLength: 'This field is required. Insert at least 5 chars.'
-                }}
-            />
-            <Textarea
-              rows={3}
-              cols={40}
-              name="body"
-              label="Tell us more details please."
-              placeholder="Ex: Fill it with your inner reporter!"
-              validations="minLength:5"
-              required
-              validationErrors={{
-                    minLength: 'This field is required. Insert at least 5 chars.'
-                }}
-            />
+        <fieldset>
+          <Textarea
+            rows={3}
+            cols={40}
+            name="title"
+            label="What happens?"
+            placeholder="Ex: A car was hitten by a bus."
+            validations="minLength:5"
+            required
+            validationErrors={{
+                  minLength: 'This field is required. Insert at least 5 chars.'
+              }}
+          />
+          <Textarea
+            rows={3}
+            cols={40}
+            name="location"
+            label="Where was it?"
+            placeholder="Ex: Near the Avenue, at the end of the street."
+            validations="minLength:5"
+            required
+            validationErrors={{
+                  minLength: 'This field is required. Insert at least 5 chars.'
+              }}
+          />
+          <Textarea
+            rows={3}
+            cols={40}
+            name="body"
+            label="Tell us more details please."
+            placeholder="Ex: Fill it with your inner reporter!"
+            validations="minLength:5"
+            required
+            validationErrors={{
+                  minLength: 'This field is required. Insert at least 5 chars.'
+              }}
+          />
         <Input
           name="phone"
           type="tel"
@@ -71,6 +71,7 @@ const ContentInside = React.createClass({
                     isNumeric: 'Please numbers only.'
                 }}
         />
+        <input className="btn btn-primary" type="submit" defaultValue={this.props.submitValue} />
       </fieldset>
       );
   }
@@ -80,22 +81,24 @@ export default class ExampleForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      formRef: 'emptyform',
+      formClass: 'form-vertical',
+      submitValue: 'Publish it!'
     };
+
+    this.submitForm = this.submitForm.bind(this);
   }
 
-  submit(data) {
-    console.log("SubmitData", data);
+  submitForm(data) {
+    console.log('Submited data: ', data);
   }
 
   render() {
     return (
       <EmptyForm
-        insideForm={<ContentInside />}
-        formClass='form-vertical'
-        submitValue="Publish it!"
-        submitAction={this.submit}/>
-    );
+        insideForm={<ContentInside submitValue={this.state.submitValue}/>}
+        submitAction={this.submitForm}
+        formClass={this.state.formClass} />
+    )
   }
-
-};
+}

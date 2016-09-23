@@ -22,8 +22,6 @@ Params:
 - {Function} submitAction The method to call as a callback, when Submit button is pressed.
 - {Function} invalidFormAction When form is invalid, will call this action. Usefull to deactivate a submit button, for example.
 - {Function} validFormAction When form is valid, will call this action. Usefull to activate a submit button, for example.
-- {String} submitValue The label for the Submit button
-
 
 To start the example:
 - enter to Example folder.
